@@ -13,7 +13,7 @@ export class WeatherComponent implements OnInit {
   }
 
   sayHello(): void {
-    
+
   }
 
 }

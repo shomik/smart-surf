@@ -11,7 +11,7 @@ import { throwIfAlreadyLoaded } from './module-import-guard';
   declarations: [ ],
   providers: [ ]
 })
-export class CoreModule { 
+export class CoreModule {
   constructor( @Optional() @SkipSelf() parentModule: CoreModule) {
     throwIfAlreadyLoaded(parentModule, 'CoreModule');
   }
