@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { CoreModule } from './core/core.module';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
@@ -23,6 +25,7 @@ import { WeatherComponent } from './weather/weather.component';
   ],
   imports: [
     BrowserModule,
+    CoreModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
