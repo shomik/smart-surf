@@ -1,0 +1,55 @@
+{
+    "coord": {
+        "lon": -96.7,
+        "lat": 33.02
+    },
+    "weather": [
+        {
+            "id": 501,
+            "main": "Rain",
+            "description": "moderate rain",
+            "icon": "10n"
+        },
+        {
+            "id": 211,
+            "main": "Thunderstorm",
+            "description": "thunderstorm",
+            "icon": "11n"
+        },
+        {
+            "id": 701,
+            "main": "Mist",
+            "description": "mist",
+            "icon": "50n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 53.42,
+        "pressure": 1009,
+        "humidity": 76,
+        "temp_min": 50,
+        "temp_max": 57.2
+    },
+    "visibility": 14484,
+    "wind": {
+        "speed": 6.93,
+        "deg": 280,
+        "gust": 7.7
+    },
+    "clouds": {
+        "all": 90
+    },
+    "dt": 1493538780,
+    "sys": {
+        "type": 1,
+        "id": 2592,
+        "message": 0.0144,
+        "country": "US",
+        "sunrise": 1493552375,
+        "sunset": 1493600923
+    },
+    "id": 4719457,
+    "name": "Plano",
+    "cod": 200
+}

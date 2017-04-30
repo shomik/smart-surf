@@ -1,6 +1,16 @@
 <md-card>
-  <button md-raised-button color="primary" (click)="sayHello()">Hello</button>
-  <button md-raised-button color="accent">Buttons</button>
+  <md-card-title>Weather For {{ city }}</md-card-title>
+  <md-card-content *ngIf="weatherResponse">
+    <h3 class="i_icon">{{ weatherResponse.main.temp }} ℉</h3>
+    <span *ngFor="let url of iconUrls"><img [src]="url" /></span>
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button color="primary">Details</button>
+    <button md-raised-button color="accent">Change City</button>
+  </md-card-actions>
+  <md-card-footer>
+    Footer
+  </md-card-footer>
 </md-card>
 
 <span class="done">

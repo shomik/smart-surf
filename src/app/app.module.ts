@@ -5,15 +5,17 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { CoreModule } from './core/core.module';
-
-import { AppComponent } from './app.component';
+// module
 import { AppRoutingModule } from './app-routing/app-routing.module';
-
+import { CoreModule } from './core/core.module';
+// component
+import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { WeatherComponent } from './weather/weather.component';
+// service
+import { OpenWeatherMapService } from './weather/open-weather-map.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,7 @@ import { WeatherComponent } from './weather/weather.component';
     MaterialModule.forRoot(),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [OpenWeatherMapService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
