@@ -10,12 +10,16 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,

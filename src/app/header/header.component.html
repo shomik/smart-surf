@@ -1,0 +1,12 @@
+<md-toolbar color="primary">
+  <span><md-icon>mood</md-icon></span>
+
+  <span>{{ title }}</span>
+
+  <button md-icon-button [md-menu-trigger-for]="menu">
+    <md-icon>more_vert</md-icon>
+  </button>
+</md-toolbar>
+<md-menu x-position="before" #menu="mdMenu">
+  <button md-menu-item routerLink="/home" routerLinkActive="active">Home</button>
+</md-menu>
