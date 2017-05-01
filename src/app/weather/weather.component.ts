@@ -12,7 +12,6 @@ import { WeatherResponse } from './weather-response';
 export class WeatherComponent implements OnInit {
   city: string = 'Plano, US';
   weatherResponse: WeatherResponse;
-  iconUrls: string[];
 
   constructor(private weatherService: OpenWeatherMapService) { }
 
@@ -20,16 +19,15 @@ export class WeatherComponent implements OnInit {
     this.weatherService.getWeatherByQuery(this.city).subscribe(
       success => {
         this.weatherResponse = success;
-        this.iconUrls = this.getImageUrls();
-        console.log(this.iconUrls);
+        this.changeImageUrls();
       },
       error => console.log(error)
     );
   }
 
-  getImageUrls(): string[] {
-    return this.weatherResponse.weather.map(w => 
-      this.weatherService.getIconUrl(w.icon)
+  changeImageUrls(): void {
+    this.weatherResponse.weather.map(w => 
+      w.icon = this.weatherService.getIconUrl(w.icon)
     );
   }
 
