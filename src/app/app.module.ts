@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import 'hammerjs';
+
 // module
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { CoreModule } from './core/core.module';
