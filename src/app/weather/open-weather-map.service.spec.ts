@@ -1,12 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
-import { Http } from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 import { OpenWeatherMapService } from './open-weather-map.service';
 
 describe('OpenWeatherMapService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [OpenWeatherMapService, Http]
+      imports: [
+        HttpModule
+      ],
+      providers: [OpenWeatherMapService]
     });
   });
 
