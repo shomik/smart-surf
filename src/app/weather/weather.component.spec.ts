@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MaterialModule } from '@angular/material';
 
 import { WeatherComponent } from './weather.component';
+import { OpenWeatherMapService } from './open-weather-map.service';
 
 describe('WeatherComponent', () => {
   let component: WeatherComponent;
@@ -8,7 +10,11 @@ describe('WeatherComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WeatherComponent ]
+      declarations: [ WeatherComponent ],
+      imports: [
+        MaterialModule.forRoot()
+      ],
+      providers: [OpenWeatherMapService]
     })
     .compileComponents();
   }));
