@@ -18,6 +18,7 @@ import { HeaderComponent } from './header/header.component';
 import { WeatherComponent } from './weather/weather.component';
 // service
 import { OpenWeatherMapService } from './weather/open-weather-map.service';
+import { GeoLocationService } from './shared/geo-location.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,10 @@ import { OpenWeatherMapService } from './weather/open-weather-map.service';
     MaterialModule.forRoot(),
     BrowserAnimationsModule
   ],
-  providers: [OpenWeatherMapService],
+  providers: [
+    OpenWeatherMapService,
+    GeoLocationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,4 +12,5 @@ describe('GeoLocationService', () => {
   it('should ...', inject([GeoLocationService], (service: GeoLocationService) => {
     expect(service).toBeTruthy();
   }));
+  
 });
