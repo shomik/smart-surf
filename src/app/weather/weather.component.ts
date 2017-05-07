@@ -12,24 +12,22 @@ import { WeatherResponse } from './weather-response';
   styleUrls: ['./weather.component.css']
 })
 export class WeatherComponent implements OnInit {
-  city: string;
+  private opts = {
+      enableHighAccuracy: true, 
+      maximumAge        : 30000, 
+      timeout           : 27000
+    };
   weatherResponse: WeatherResponse;
 
   constructor(private weatherService: OpenWeatherMapService, private geoLocationService: GeoLocationService) { }
 
   ngOnInit() {
-    const opts = {
-      enableHighAccuracy: true, 
-      maximumAge        : 30000, 
-      timeout           : 27000
-    };
-    this.geoLocationService.getLocation(opts).subscribe(
+    this.geoLocationService.getLocation(this.opts).subscribe(
       success => {
         console.log(success.coords);
         this.weatherService.getWeatherByLatLon(success.coords.latitude, success.coords.longitude).subscribe(
           weather => {
             console.log(weather);
-            this.city = weather.name;
             this.weatherResponse = weather;
             this.changeImageUrls();
           },
@@ -38,13 +36,6 @@ export class WeatherComponent implements OnInit {
       },
       error => console.log(error)
     );
-    // this.weatherService.getWeatherByQuery(this.city).subscribe(
-    //   success => {
-    //     this.weatherResponse = success;
-    //     this.changeImageUrls();
-    //   },
-    //   error => console.log(error)
-    // );
   }
 
   changeImageUrls(): void {

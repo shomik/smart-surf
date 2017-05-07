@@ -1,6 +1,6 @@
-<md-card>
-  <md-card-title>{{ city }}</md-card-title>
-  <md-card-content *ngIf="weatherResponse">
+<md-card *ngIf="weatherResponse">
+  <md-card-title>{{ weatherResponse.name }}</md-card-title>
+  <md-card-content>
     <h3 class="i_icon">{{ weatherResponse.main.temp }} ℉</h3>
     Min: {{ weatherResponse.main.temp_min }} Max: {{ weatherResponse.main.temp_max }} <br />
     <div *ngFor="let weather of weatherResponse.weather">
